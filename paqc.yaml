@@ -53,6 +53,6 @@ amendments:
 
       
 metadata:
-  output_dir: "/project/shefflab/processed/peppro/paper/"
+  output_dir: "/project/shefflab/processed/paqc"
   pipeline_interfaces: "$CODE/pepatac/pipeline_interface.yaml" 
   
