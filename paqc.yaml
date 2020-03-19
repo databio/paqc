@@ -40,7 +40,8 @@ sample_modifiers:
 
 amendments:
   sra_convert:
-    pipeline_interfaces: ${CODE}/sra_convert/pipeline_interface_convert.yaml
+    looper:
+      pipeline_interfaces: ${CODE}/sra_convert/pipeline_interface_convert.yaml
     sample_modifiers:
       derive:
         attributes: ["read1", "read2", "SRR_files"]
