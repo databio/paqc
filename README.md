@@ -20,16 +20,16 @@ echo "/repository/user/main/public/root = \"$DATA\"" > ${HOME}/.ncbi/user-settin
 
 ## Format your PEP
 
-You'll need to manually tweak the output of geofetch to adopt the new PEP 2.0.0 specification. Validate the configuration file with [`peppy`](https://github.com/pepkit/peppy) like so:
+You'll need to manually tweak the output of geofetch to adopt the new PEP 2.0.0 specification. Validate the configuration file with [`eido`](https://github.com/pepkit/eido) like so:
 ```
-peppy validate paqc.yaml -s http://schema.databio.org/pipelines/pepatac.yaml
+eido validate paqc.yaml -s http://schema.databio.org/pipelines/pepatac.yaml
 ```
 
 ## Convert the SRA files to FASTQ
 
 Use the `sra_convert` amendment to point at the conversion pipeline. Run in looper:
 ```
-PROCESSED=/project/shefflab/processed DATA=/project/shefflab/data/ looper run paqc.yaml --amendments sra_convert
+looper run paqc.yaml --amendments sra_convert --lump 25
 ```
 
 ## Run PEPATAC
