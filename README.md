@@ -6,9 +6,9 @@ The `paqc_annotation.csv` file is the working annotation file for these samples.
 
 ## Download data
 
-Get source samples using geofetch
+Get source data using geofetch
 ```
-geofetch -i accessions.txt -n paqc --m paqc_geo_metadata
+geofetch -i accessions.txt -n paqc -m paqc_geo_metadata
 ```
 
 You can set up a default sratoolkit config like this:
