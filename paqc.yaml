@@ -6,9 +6,11 @@ subsample_table: "paqc_subannotation.csv"
 
 looper:
   output_dir: "/project/shefflab/processed/paqc"
-  pipeline_interfaces: "$CODE/pepatac/pipeline_interface.yaml" 
+  pipeline_interfaces: "$CODE/pepatac/pipeline_interface_project.yaml" 
 
 sample_modifiers:
+  append:
+     pipeline_interfaces: "$CODE/pepatac/pipeline_interface_sample.yaml" 
   imply:
     - if:
         organism: "human"

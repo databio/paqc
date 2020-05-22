@@ -29,7 +29,7 @@ eido validate paqc.yaml -s http://schema.databio.org/pipelines/pepatac.yaml
 
 Use the `sra_convert` amendment to point at the conversion pipeline. Run in looper:
 ```
-looper run paqc.yaml --amendments sra_convert --lump 25
+looper run paqc.yaml -a sra_convert --lump 25
 ```
 
 ## Run PEPATAC
